@@ -2,8 +2,6 @@
 #include <TimeLib.h>
 
 /*
-Liquid flow rate sensor -DIYhacking.com Arvind Sanjeev
-
 Measure the liquid/water flow rate using this code.
 Connect Vcc and Gnd of sensor to arduino, and the
 signal line to arduino digital pin 2.
@@ -143,35 +141,10 @@ void loop()
     Serial.println(0.5);}
   else 
     Serial.println(0);
-  //Serial.println("m");
-
-  /*Display flood warning status for each pulse
-  Serial.print("Status: ");
-  if( x == 2.5 || x == 2.0){
-    if( flowRate >= 5 && flowRate <= 6)
-      Serial.print("Warning - imminent flood");
-    else if ( flowRate >= 3 && flowRate <= 4)
-      Serial.print("Caution - high levels");
-  }
-  else if ( x == 1.5 || x == 1.0){
-    if( flowRate >= 3)
-      Serial.print("Caution");
-  }
-  else
-    Serial.print("Safe");*/
-     
+       
  time = micros() - time;
  
  Serial.println(time, DEC);
 
   delay(1000);
 }
-
-/*
-Insterrupt Service Routine
- 
-//void pulseCounter()
-{
-  // Increment the pulse counter
-  pulseCount++;
-}*/
